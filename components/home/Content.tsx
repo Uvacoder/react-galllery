@@ -5,7 +5,6 @@ type HomeContentProps = {
 }
 
 const HomeContent = ({ images }: HomeContentProps) => {
-  console.log(images)
   return (
     <div>
       <p>content</p>
