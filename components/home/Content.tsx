@@ -1,12 +1,16 @@
-import type {TImages} from '../../types/Images'
+import type { TImages } from '../../types/Images'
 
-const HomeContent = ({images}: TImages) => {
-	console.log(images)
-	return (
-		<div>
-			<p>content</p>
-		</div>
-	)
+type HomeContentProps = {
+  images: Array<TImages>
+}
+
+const HomeContent = ({ images }: HomeContentProps) => {
+  console.log(images)
+  return (
+    <div>
+      <p>content</p>
+    </div>
+  )
 }
 
 export default HomeContent
