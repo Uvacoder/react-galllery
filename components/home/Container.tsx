@@ -5,7 +5,7 @@ import Images from './Images'
 type HomeContentProps = {
   images: Array<TImages>
 }
-const HomeContent = ({ images }: HomeContentProps): JSX.Element => {
+const HomeContainer = ({ images }: HomeContentProps): JSX.Element => {
   return (
     <div className={homeStyles.container}>
       {images.map((image) => (
@@ -21,4 +21,4 @@ const HomeContent = ({ images }: HomeContentProps): JSX.Element => {
   )
 }
 
-export default HomeContent
+export default HomeContainer
