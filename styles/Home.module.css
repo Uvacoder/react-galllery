@@ -2,4 +2,10 @@
   min-height: 100vh;
   padding: 0 2rem;
   height: 100vh;
+  display: flex;
+}
+
+.img {
+  width: 300px;
+  height: 300px;
 }

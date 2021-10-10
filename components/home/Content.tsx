@@ -1,21 +1,20 @@
 import type { TImages } from '../../types/Images'
-import Image from 'next/image'
+import homeStyles from '../../styles/Home.module.css'
+import Images from './Images'
 
 type HomeContentProps = {
   images: Array<TImages>
 }
-
-const HomeContent = ({ images }: HomeContentProps) => {
+const HomeContent = ({ images }: HomeContentProps): JSX.Element => {
   return (
-    <div>
+    <div className={homeStyles.container}>
       {images.map((image) => (
-        <Image
-          src={image.download_url}
-          alt={image.author}
+	<Images
+	  author={image.author}
+          download_url={image.download_url}
+          id={image.id}
           key={image.id}
-          width={200}
-          height={200}
-          loading="lazy"
+          url={image.url}
         />
       ))}
     </div>
