@@ -1,6 +1,5 @@
 import type { TImages } from '../../types/Images'
 import homeStyles from '../../styles/Home.module.css'
-import Image from 'next/image'
 
 const ImagesContent = ({
   id,
@@ -10,17 +9,11 @@ const ImagesContent = ({
   url,
   width,
 }: TImages): JSX.Element => {
+  const commonImgWidth:number = 200
 
   return (
-    <div>
-      <Image
-	className={homeStyles.img}
-        src={download_url}
-        alt={author}
-        key={id}
-        loading="lazy"
-	layout="fill"
-      />
+    <div className={homeStyles.imgCard}>
+      <p>{author}</p>
     </div>
   )
 }
