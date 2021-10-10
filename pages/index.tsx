@@ -25,7 +25,7 @@ const Home: NextPage = ({
 }
 export default Home
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   const res: Response = await fetch('https://picsum.photos/v2/list')
   const imagesData: TImages[] = await res.json()
 
