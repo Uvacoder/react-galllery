@@ -10,8 +10,8 @@ export type TImages = {
 interface ArtistInterface {
   image: string
   name: string
-  artistwidth: string
-  artistheight: string
+  artistwidth: number
+  artistheight: number
 }
 
 interface ImagesProperties {
