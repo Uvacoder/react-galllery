@@ -32,6 +32,7 @@ interface ImagesProperties {
 }
 
 export interface ImageInterface {
+  id?: number
   name: string
   year: number
   description: string
