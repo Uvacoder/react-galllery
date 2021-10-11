@@ -2,7 +2,7 @@ import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next'
 import type { TImages, ImageInterface } from '../types/Images'
 import Head from 'next/head'
 import Header from '../components/common/Header'
-import HomeContainer from '../components/home/Container'
+import ImagesList from '../components/home/ImagesList'
 import {getAllImages} from '../utils/photos'
 
 type HomeProps = {
@@ -20,7 +20,7 @@ const Home: NextPage = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <HomeContainer images={images} />
+      <ImagesList images={images} />
     </main>
   )
 }
