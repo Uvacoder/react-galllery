@@ -7,6 +7,7 @@ module.exports = {
       'nikovirtanen.com',
       'picsum.photos',
       'github.com',
+      'en.wikipedia.org',
     ],
   },
 }

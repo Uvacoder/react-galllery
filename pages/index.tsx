@@ -1,11 +1,12 @@
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next'
-import type { TImages } from '../types/Images'
+import type { TImages, ImageInterface } from '../types/Images'
 import Head from 'next/head'
 import Header from '../components/common/Header'
 import HomeContainer from '../components/home/Container'
+import {getAllImages} from '../utils/photos'
 
 type HomeProps = {
-  images: TImages[]
+  images: ImageInterface[]
 }
 
 const Home: NextPage = ({
@@ -26,8 +27,7 @@ const Home: NextPage = ({
 export default Home
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res: Response = await fetch('https://picsum.photos/v2/list')
-  const imagesData: TImages[] = await res.json()
+  const imagesData: ImageInterface[] = getAllImages()
 
   return {
     props: {

@@ -1,23 +1,20 @@
-import type { TImages } from '../../types/Images'
+import type { ImageInterface } from '../../types/Images'
 import homeStyles from '../../styles/Home.module.css'
 import Images from './Images'
 
 type HomeContentProps = {
-  images: Array<TImages>
+  images: Array<ImageInterface>
 }
 const HomeContainer = ({ images }: HomeContentProps): JSX.Element => {
   return (
-    <div className={homeStyles.container}>
+    <section className={homeStyles.container}>
       {images.map((image) => (
 	<Images
-	  author={image.author}
-          download_url={image.download_url}
-          id={image.id}
-          key={image.id}
-          url={image.url}
+	  key={image.name}
+	  {...image}
         />
       ))}
-    </div>
+    </section>
   )
 }
 
