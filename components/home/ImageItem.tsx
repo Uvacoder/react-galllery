@@ -14,8 +14,9 @@ const ImagesContent = ({
   const { thumbnail } = images
 
   return (
-    <article>
-      <Image src={thumbnail} alt={`${name} - by ${artist}`} layout="fill"/>
+    <article className={homeStyles.imgCard}>
+      <Image className={homeStyles.img} src={thumbnail} alt={`${name} - by ${artist}`} layout="fill"/>
+      <h1 className={homeStyles.imgAuthor}>{name}</h1>
     </article>
   )
 }
