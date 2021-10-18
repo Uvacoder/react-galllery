@@ -1,29 +1,43 @@
-.container {
+.layout {
+  height: 100vh;
   min-height: 100vh;
   padding: 0 2rem;
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
   row-gap: 1.5rem;
-  align-items: center;
+  width: 100%;
 }
 
 .imgCard {
-  width: 300px;
-  height: 300px;
-  position: relative;
-  display: flex;
   align-items: flex-end;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 100px 40px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  display: block;
+  object-fit: cover;
   padding: 0 1.5rem;
+  position: relative;
 }
 
-.img {
-  position: absolute;
-  width: 100%;
-  inset: 0;
+.imgFlex {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0 2rem 0.5rem;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.imgCard:hover > .imgFlex {
+  opacity: 1;
+  transition: opacity var(--transition);
+}
+
+.imgName {
+  font-size: 2rem;
+  margin: 0;
 }
 
 .imgAuthor {
-  position: relative;
+  font-size: 0.95rem;
+  margin: 0;
+  opacity: 0.8;
 }

@@ -8,15 +8,26 @@ const ImagesContent = ({
   artist,
   images,
   source,
-  description
+  description,
 }: ImageInterface): JSX.Element => {
-  
-  const { thumbnail } = images
+  const {
+    thumbnail,
+    hero,
+    thumbwidth,
+    thumbheight,
+    gallery,
+    smallheight,
+    smallwidth,
+  } = images
+  const artistName = artist.name
+  console.log(images)
 
   return (
     <article className={homeStyles.imgCard}>
-      <Image className={homeStyles.img} src={thumbnail} alt={`${name} - by ${artist}`} layout="fill"/>
-      <h1 className={homeStyles.imgAuthor}>{name}</h1>
+      <div className={homeStyles.imgFlex}>
+        <h1 className={homeStyles.imgName}>{name}</h1>
+        <h3 className={homeStyles.imgAuthor}>{artistName}</h3>
+      </div>
     </article>
   )
 }

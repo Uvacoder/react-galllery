@@ -1,9 +1,9 @@
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next'
-import type { TImages, ImageInterface } from '../types/Images'
+import type { ImageInterface } from '../types/Images'
 import Head from 'next/head'
 import Header from '../components/common/Header'
 import ImagesList from '../components/home/ImagesList'
-import {getAllImages} from '../utils/photos'
+import { getAllImages } from '../utils/photos'
 
 type HomeProps = {
   images: ImageInterface[]
