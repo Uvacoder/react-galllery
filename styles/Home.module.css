@@ -3,19 +3,24 @@
   min-height: 100vh;
   padding: 0 2rem;
   row-gap: 1.5rem;
-  width: 100%;
 }
 
 .imgCard {
-  align-items: flex-end;
-  background-position: center;
-  background-repeat: no-repeat;
   box-shadow: inset 0 0 100px 40px rgba(0, 0, 0, 0.5);
   color: #ffffff;
   display: block;
-  object-fit: cover;
   padding: 0 1.5rem;
   position: relative;
+}
+
+.imgFigure {
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.imgFigure > img {
+  position: absolute;
 }
 
 .imgFlex {
@@ -26,7 +31,7 @@
   transition: opacity var(--transition);
 }
 
-.imgCard:hover > .imgFlex {
+.imgCard:hover .imgFlex {
   opacity: 1;
   transition: opacity var(--transition);
 }

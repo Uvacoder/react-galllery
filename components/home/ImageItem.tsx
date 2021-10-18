@@ -1,6 +1,7 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import type { ImageInterface } from '../../types/Images'
 import homeStyles from '../../styles/Home.module.css'
-import Image from 'next/image'
 
 const ImagesContent = ({
   name,
@@ -24,10 +25,20 @@ const ImagesContent = ({
 
   return (
     <article className={homeStyles.imgCard}>
-      <div className={homeStyles.imgFlex}>
-        <h1 className={homeStyles.imgName}>{name}</h1>
-        <h3 className={homeStyles.imgAuthor}>{artistName}</h3>
-      </div>
+      <Link href="/" passHref>
+        <figure className={homeStyles.imgFigure}>
+          <Image
+            alt={`${name} - by ${artistName}`}
+            height={thumbheight}
+            src={thumbnail}
+            width={thumbwidth}
+          />
+          <figcaption className={homeStyles.imgFlex}>
+            <h1 className={homeStyles.imgName}>{name}</h1>
+            <h3 className={homeStyles.imgAuthor}>{artistName}</h3>
+          </figcaption>
+        </figure>
+      </Link>
     </article>
   )
 }
