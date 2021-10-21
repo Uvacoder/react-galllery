@@ -23,8 +23,8 @@ const ImagesContent = ({
   const artistName = artist.name
 
   return (
-    <div className={homeStyles.imgCard} style={{height: thumbheight, width: thumbwidth}}>
-      <Link href="/" passHref>
+    <div className={homeStyles.imgCard}>
+      <Link href="/">
         <>
           <img
             alt={`${name} - by ${artistName}`}

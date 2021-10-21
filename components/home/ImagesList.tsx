@@ -7,7 +7,7 @@ type HomeContentProps = {
 }
 const HomeContainer = ({ images }: HomeContentProps): JSX.Element => {
   return (
-    <section className={homeStyles.layout}>
+    <section className={homeStyles.imgList}>
       {images.map((image) => (
         <ImageItem key={image.name} {...image} />
       ))}
