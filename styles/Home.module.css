@@ -9,31 +9,22 @@
   box-shadow: inset 0 0 100px 40px rgba(0, 0, 0, 0.5);
   color: #ffffff;
   display: block;
-  padding: 0 1.5rem;
   position: relative;
 }
 
-.imgFigure {
-  object-fit: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.imgFigure > img {
-  position: absolute;
-}
-
-.imgFlex {
-  display: flex;
-  flex-direction: column;
-  margin: 2rem 0 2rem 0.5rem;
-  opacity: 0;
-  transition: opacity var(--transition);
-}
-
-.imgCard:hover .imgFlex {
+.imgCard:hover {
   opacity: 1;
   transition: opacity var(--transition);
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.imgText {
+  position: absolute;
 }
 
 .imgName {

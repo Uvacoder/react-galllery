@@ -5,6 +5,16 @@ import Header from '../components/common/Header'
 import ImagesList from '../components/home/ImagesList'
 import { getAllImages } from '../utils/photos'
 
+export const getStaticProps: GetStaticProps = async () => {
+  const imagesData: ImageInterface[] = getAllImages()
+
+  return {
+    props: {
+      images: imagesData,
+    },
+  }
+}
+
 type HomeProps = {
   images: ImageInterface[]
 }
@@ -25,13 +35,3 @@ const Home: NextPage = ({
   )
 }
 export default Home
-
-export const getStaticProps: GetStaticProps = async () => {
-  const imagesData: ImageInterface[] = getAllImages()
-
-  return {
-    props: {
-      images: imagesData,
-    },
-  }
-}

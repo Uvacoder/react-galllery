@@ -1,4 +1,4 @@
-interface ArtistInterface {
+interface ArtistProperties {
   image: string
   name: string
   artistwidth: number
@@ -28,6 +28,6 @@ export interface ImageInterface {
   year: number
   description: string
   source: string
-  artist: ArtistInterface
+  artist: ArtistProperties
   images: ImagesProperties
 }

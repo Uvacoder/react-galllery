@@ -21,25 +21,23 @@ const ImagesContent = ({
     smallwidth,
   } = images
   const artistName = artist.name
-  console.log(images)
 
   return (
-    <article className={homeStyles.imgCard}>
+    <div className={homeStyles.imgCard} style={{height: thumbheight, width: thumbwidth}}>
       <Link href="/" passHref>
-        <figure className={homeStyles.imgFigure}>
-          <Image
+        <>
+          <img
             alt={`${name} - by ${artistName}`}
-            height={thumbheight}
             src={thumbnail}
-            width={thumbwidth}
+            className={homeStyles.img}
           />
-          <figcaption className={homeStyles.imgFlex}>
+          <article className={homeStyles.imgText}>
             <h1 className={homeStyles.imgName}>{name}</h1>
             <h3 className={homeStyles.imgAuthor}>{artistName}</h3>
-          </figcaption>
-        </figure>
+          </article>
+        </>
       </Link>
-    </article>
+    </div>
   )
 }
 
