@@ -1,32 +1,27 @@
-.imgList {
-  height: 100vh;
+.imgContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 1.5rem;
+
   min-height: 100vh;
   padding: 0 2rem;
-  row-gap: 1.5rem;
-  display: grid;
-  grid-auto-columns: min-content;
 }
 
 .imgCard {
   box-shadow: inset 0 0 100px 40px rgba(0, 0, 0, 0.5);
   color: #ffffff;
-  display: inline-block;
+  display: block;
   position: relative;
 }
 
-.imgCard:hover {
-  opacity: 1;
-  transition: opacity var(--transition);
-}
-
-.img {
-  display: inline-block;
+.imgCard > img {
+  position: relative;
 }
 
 .imgText {
   position: absolute;
   bottom: 0;
-  display: block;
   opacity: 0;
   transition: var(--transition);
   margin: 0 0 2rem 2rem;

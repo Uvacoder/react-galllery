@@ -23,13 +23,19 @@ const ImagesContent = ({
   const artistName = artist.name
 
   return (
-    <div className={homeStyles.imgCard}>
+    <div
+      className={homeStyles.imgCard}
+      style={{
+        width: thumbwidth,
+        height: thumbheight,
+      }}
+    >
       <Link href="/">
         <>
-          <img
+          <Image
             alt={`${name} - by ${artistName}`}
             src={thumbnail}
-            className={homeStyles.img}
+            layout="fill"
           />
           <article className={homeStyles.imgText}>
             <h1 className={homeStyles.imgName}>{name}</h1>
